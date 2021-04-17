@@ -1,0 +1,21 @@
+.FooterContainer{
+    background-color: #172924;
+    margin-top: 100px;
+
+}
+.FooterContent {
+    margin-left: 100px;
+    margin-right: 100px;
+    padding-top: 50px;
+}
+.footerText{
+    color:grey;
+    text-align: justify;
+    margin-top: 20px;
+}
+.textColor{
+    color: #00ffc8;
+    border-bottom: 2px solid grey;
+    text-align: center;
+    padding-bottom: 10px;
+}

@@ -1,0 +1,28 @@
+.DeliveryCard{
+    margin-top: 40px;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+.deliveryCard{
+    color: #00ffea;
+    text-align: center;
+}
+.deliveryImage{
+    width: 200px;
+    border-radius: 100px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+
+.deliveryButton{
+    margin-top: 20px;
+    margin-left: 500px;
+    margin-right: 500px;
+    border: none;
+    border-radius: 0px 10px 0px 10px;
+    width: 180px;
+    height: 40px;
+    color: white;
+    font-size: large;
+    background-image: linear-gradient(to right, #22ffc8 , #5dffdc);
+}

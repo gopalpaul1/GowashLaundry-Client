@@ -1,0 +1,13 @@
+.InputField{
+    width:350px;
+    margin:10px;
+    padding: 4px;
+}
+.SubmitField{
+    border:none;
+    width: 350px;
+    height: 40px;
+    color:white;
+    background-image: linear-gradient(to right, #00ffdd, #00ffea);
+    margin-left: 10px;
+}
