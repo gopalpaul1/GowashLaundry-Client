@@ -18,7 +18,7 @@ const Testimonial = () => {
             <div className="TestimonialCard">
                 {
 
-                    reviews.map(review => <Reviews review={review} />)
+                    reviews.map(review => <Reviews review={review} key={review._id} />)
 
                 }
             </div>

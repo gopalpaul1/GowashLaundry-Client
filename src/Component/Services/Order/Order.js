@@ -11,6 +11,7 @@ const Order = () => {
 
     let { id } = useParams();
     const [orders, setOrders] = useState([])
+    const [orderData, setOrderData] = useState(null)
 
     useEffect(() => {
         fetch('https://blooming-sea-02282.herokuapp.com/services')
@@ -25,33 +26,42 @@ const Order = () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const onSubmit = data => {
         console.log(data)
-        // const order = {
-        //     name: data.name,
-        //     email: data.email,
-        //     service: data.
-        // }
-        // console.log(order)
-        // const url = `http://localhost:5055/addReview`
-        // fetch(url, {
-        //     method: 'POST',
-        //     headers: {
-        //         'content-type': 'application/json'
-        //     },
-        //     body: JSON.stringify(review)
-        // })
+        setOrderData(data)
     };
 
-    
+    const handlePaymentSuccess = paymentId => {
 
+        const orderDetails = {
+            ...loggedInUser,
+            ...ordered,
+            order: orderData,
+            paymentId, 
+            orderTime: new Date()}
+
+        fetch('https://blooming-sea-02282.herokuapp.com/addOrder', {
+            method: 'POST',
+            headers: {
+                'content-type' : 'application/json'
+            },
+            body: JSON.stringify(orderDetails)
+        })
+        .then(res => res.json())
+        .then(data => {
+            if(data){
+                alert('Your Order Successfully done')
+            }
+        })
+    }
+
+    
 
     return (
         <div style={{ display: "flex" }}>
             <ServiceHeader />
             <div className="orderContent">
                 <h2 style={{color:"#00ffd5"}}>Order</h2>
-                <div>
+                <div style={{display: orderData ? 'none' : 'block'}}>
                     <form onSubmit={handleSubmit(onSubmit)}>
-
                         <input className="InputField" value={loggedInUser.name}  {...register("name")} />
                         <br/>
                         <input className="InputField" value={loggedInUser.email}  {...register("email")} />
@@ -61,18 +71,15 @@ const Order = () => {
                         <input className="SubmitField" type="submit" />
                     </form>
                 </div>
-                <div>
+                <div style={{display: orderData ? 'block' : 'none'}}>
                     <div className="InputField">
                         <h4 style={{color:"cyan"}}>Visa Card Payment :</h4>
                         <div>
-                            <PaymentProcess />
+                            <PaymentProcess handlePayment = {handlePaymentSuccess} />
                         </div>
                     </div>
                 </div>
-
             </div>
-
-
         </div>
     );
 };

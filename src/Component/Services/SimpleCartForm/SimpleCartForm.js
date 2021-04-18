@@ -1,6 +1,7 @@
 import {CardElement, useStripe, useElements} from '@stripe/react-stripe-js';
 
-const SimpleCartForm = () => {
+const SimpleCartForm = ({handlePayment}) => {
+
   const stripe = useStripe();
   const elements = useElements();
 
@@ -29,6 +30,7 @@ const SimpleCartForm = () => {
       console.log('[error]', error);
     } else {
       console.log('[PaymentMethod]', paymentMethod);
+      handlePayment(paymentMethod.id)
     }
   };
 
