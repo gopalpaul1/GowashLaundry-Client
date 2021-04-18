@@ -2,7 +2,7 @@
 
 # GoWash Laundry Project is here !
 
-Project Name: [(GoWash-Laundry)]
+### Project Name: [(GoWash-Laundry)]
 
 
 Project Details:

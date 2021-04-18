@@ -7,7 +7,7 @@ const Products = () => {
 
     useEffect(() => {
 
-        fetch('http://localhost:5055/services')
+        fetch('https://blooming-sea-02282.herokuapp.com/services')
         .then(res => res.json())
         .then(data => setProducts(data))
 

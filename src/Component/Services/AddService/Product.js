@@ -16,7 +16,7 @@ const Product = () => {
             imageURL: imageURL
         };
         console.log(service)
-        const url = `http://localhost:5055/addService`
+        const url = `https://blooming-sea-02282.herokuapp.com/addService`
         fetch(url, {
             method: 'POST',
             headers: {

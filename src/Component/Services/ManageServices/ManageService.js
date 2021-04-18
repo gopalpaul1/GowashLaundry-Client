@@ -18,7 +18,7 @@ const ManageService = () => {
 
     const deleteProduct = (event,id) => {
 
-        fetch(`https://fierce-thicket-77007.herokuapp.com/delete/${id}`, {
+        fetch(`https://blooming-sea-02282.herokuapp.com/delete/${id}`, {
             method: 'DELETE'
         })
         .then(res => res.json())
