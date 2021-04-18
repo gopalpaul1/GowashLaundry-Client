@@ -1,0 +1,47 @@
+.TestimonialContent{
+    margin-top: 80px;
+}
+
+.TestimonialCard{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 20px;
+}
+
+.ExploreButton{
+    border: none;
+    width: 200px;
+    height: 40px;
+    color:white;
+    font-size: large;
+    background-image: linear-gradient(to right, #00ffc8, #00ffea);
+    margin-left: 540px;
+    margin-top: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+    .TestimonialContent{
+        margin-top: 80px;
+    }
+    
+    .TestimonialCard{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        margin-left: 80px;
+        margin-right: 200px;
+        margin-top: 20px;
+    }
+    
+    .ExploreButton{
+        border: none;
+        width: 200px;
+        height: 40px;
+        color:white;
+        font-size: large;
+        background-image: linear-gradient(to right, #00ffc8, #00ffea);
+        margin-left: 120px;
+        margin-top: 30px;
+    }
+}

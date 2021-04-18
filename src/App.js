@@ -14,6 +14,9 @@ import Review from './Component/Services/Review/Review';
 import ManageService from './Component/Services/ManageServices/ManageService';
 import Admin from './Component/Services/Admin/Admin';
 import { createContext, useState } from 'react';
+import Login from './Component/Login/Login';
+import PrivateRoute from './PrivateRoute/PrivateRoute';
+
 
 export const UserContext = createContext();
 
@@ -30,18 +33,18 @@ function App() {
           <Route path="/home">
             <Home />
           </Route>
-          <Route path="/service">
+          <PrivateRoute path="/service">
             <Service />
-          </Route>
-          <Route path="/admin">
+          </PrivateRoute>
+          <PrivateRoute path="/admin">
             <Admin />
-          </Route>
+          </PrivateRoute>
           <Route path="/product">
             <Product />
           </Route>
-          <Route path="/order/:id">
+          <PrivateRoute path="/order/:id">
             <Order />
-          </Route>
+          </PrivateRoute>
           <Route path="/orderlist">
             <Orderlist />
           </Route>
@@ -50,6 +53,9 @@ function App() {
           </Route>
           <Route path="/manage">
             <ManageService />
+          </Route>
+          <Route path="/login">
+            <Login />
           </Route>
           <Route exact path="/">
             <Home />

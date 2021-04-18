@@ -1,8 +1,9 @@
 .cardContainer{
-
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     margin-left: 200px;
     margin-right: 200px;
-    margin-top: 20px;
+    margin-top: 80px;
     
 }
 .CardImage{
@@ -30,4 +31,41 @@
     height: auto;
     box-shadow: 5px 5px 20px #585757;
 
+}
+
+@media only screen and (max-width: 600px) {
+    .cardContainer{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        margin-left: 50px;
+        margin-top: 160px;
+        padding: 10px;
+        
+    }
+    .CardImage{
+        background-image: url("../../../images/image3.jpg");
+        background-color: grey;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100%;
+    
+    }
+    .orderCard{
+        color: #00ffdd;
+    }
+    .Button{
+        width: 140px;
+        height: 40px;
+        border:none;
+        color: white;
+        font-size: large;
+        background-image: linear-gradient(to right, #22ffc8 , #5dffdc);
+    }
+    .Image{
+    
+        width: 330px;
+        height: auto;
+        box-shadow: 5px 5px 20px #585757;
+    
+    }
 }

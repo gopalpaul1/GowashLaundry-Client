@@ -6,6 +6,7 @@ import From from '../Form/From';
 
 import Header from '../Header/Header/Header';
 import Products from '../Products/Products';
+import Testimonial from '../Testimonial/Testimonial';
 
 
 const Home = () => {
@@ -15,6 +16,7 @@ const Home = () => {
             <Delivary/>
             <Products/>
             <From/>
+            <Testimonial/>
             <Footer/>
         </div>
     );

@@ -5,22 +5,17 @@ import logo from '../../../../images/209-2097878_laundry-dry-cleaning-cleaning-a
 
 const Navbar = () => {
     return (
-        <div>
-            <nav className="navbar navbar-expand-lg navbar-light navContent">
-                <div className="container-fluid">
-                    <h2 style={{color:"#08d4a8", marginLeft:"40px"}}><img style={{width:"60px"}} src={logo} alt=""/>GoWash</h2>
 
-                    <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-                        <div className="navbar-nav ms-auto me-5">
-                            <Link className="nav-link active text-style" to="/home">Home</Link>
-                            <Link className="nav-link active text-style" to="/service">Services</Link>
-                            <Link className="nav-link active text-style" to="/home">Blog</Link>
-                            <Link className="nav-link active text-style" to="/home">Admin</Link>
-                        </div>
-                    </div>
+        <nav className="navContent">
+                <h2 style={{ color: "#08d4a8", marginLeft: "40px" }} className="NavTittle"><img style={{ width: "60px" }} src={logo} alt="" />GoWash</h2>
+                <div className="NavTittle">
+                    <Link className="text-style" to="/home">Home</Link>
+                    <Link className="text-style" to="/service">Services</Link>
+                    <Link className="text-style" to="/home">Blog</Link>
+                    <Link className="text-style" to="/admin">Admin</Link>
+                    <Link className="text-style" to="/login"><button className="LoginButton">Login</button></Link>
                 </div>
-            </nav>
-        </div>
+        </nav>
     );
 };
 

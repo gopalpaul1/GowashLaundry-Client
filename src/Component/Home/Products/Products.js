@@ -7,7 +7,7 @@ const Products = () => {
 
     useEffect(() => {
 
-        fetch('http://localhost:5055/service')
+        fetch('http://localhost:5055/services')
         .then(res => res.json())
         .then(data => setProducts(data))
 
@@ -15,10 +15,10 @@ const Products = () => {
     return (
         <div className="">
             <div className="provideService">
-                <h2>Dry Cleaning and Laundry Made Simple</h2>
+                <h3>Dry Cleaning Laundry Made Simple</h3>
                 <p style={{fontSize:"large", marginTop:"20px"}}>Laundry provide Services</p>
             </div>
-            <div className="row productContainer">
+            <div className="productContainer">
                 {
                     products.map(pd => <ProductService product = {pd} key={pd._id}/>)
                 }

@@ -28,7 +28,7 @@ const Review = () => {
         <div style={{ display: "flex" }}>
             <ServiceHeader />
             <div className="ReviewContent">
-                <h2>Review</h2>
+                <h2 style={{color:"#00ffd5"}}>Review</h2>
                 <div>
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <input className="InputField" name="name" defaultValue="name" {...register("name")} />

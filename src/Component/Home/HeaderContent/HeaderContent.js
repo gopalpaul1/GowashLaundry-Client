@@ -6,13 +6,13 @@ import './HeaderContent.css'
 const HeaderContent = () => {
     return (
         <div className="CardImage">
-            <div className="row align-items-center cardContainer">
-                <div className="col-md-5 orderCard ">
+            <div className="align-items-center cardContainer">
+                <div className="orderCard ">
                     <h2>Save Time For More Important Things</h2>
                     <p>WE'LL TAKE CARE ABOUT CLEANNESS</p>
                     <button className="Button">Order Now</button>
                 </div>
-                <div className="col-md-7 mt-5">
+                <div className="mt-5">
                     <img className="Image imageCard" src={image2} alt="images" />
                 </div>
             </div>

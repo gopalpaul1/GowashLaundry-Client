@@ -1,8 +1,17 @@
 .DeliveryCard{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 300px;
     margin-top: 40px;
     margin-left: 200px;
     margin-right: 200px;
 }
+.CardsDelivery{
+    margin: 20px;
+    padding: 20px;
+    box-shadow: 5px 5px 20px lightgrey;
+}
+
 .deliveryCard{
     color: #00ffea;
     text-align: center;
@@ -11,7 +20,7 @@
     width: 200px;
     border-radius: 100px;
     margin-bottom: 10px;
-    margin-left: 20px;
+    margin-left: 5px;
 }
 
 .deliveryButton{
@@ -25,4 +34,44 @@
     color: white;
     font-size: large;
     background-image: linear-gradient(to right, #22ffc8 , #5dffdc);
+}
+
+@media only screen and (max-width: 600px) {
+    .DeliveryCard{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        width: 300px;
+        margin-top: 40px;
+        margin-left: 80px;
+        /* margin-right: 50px; */
+    }
+    .CardsDelivery{
+        margin: 20px;
+        padding: 20px;
+        box-shadow: 5px 5px 20px lightgrey;
+    }
+    .deliveryCard{
+        color: #00ffea;
+        text-align: center;
+        
+    }
+    .deliveryImage{
+        width: 200px;
+        border-radius: 100px;
+        margin-bottom: 10px;
+        margin-left: 10px;
+    }
+
+    .deliveryButton{
+        margin-top: 20px;
+        margin-left: 140px;
+        border: none;
+        border-radius: 0px 10px 0px 10px;
+        width: 180px;
+        height: 40px;
+        color: white;
+        font-size: large;
+        background-image: linear-gradient(to right, #22ffc8 , #5dffdc);
+    }
+
 }

@@ -1,6 +1,6 @@
 import React from 'react';
+import { useContext } from 'react';
 import { Redirect, Route } from 'react-router';
-import { useContext } from 'react/cjs/react.production.min';
 import { UserContext } from '../App';
 
 const PrivateRoute = ({ children, ...rest }) => {

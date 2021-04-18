@@ -10,21 +10,21 @@ const Delivary = () => {
     return (
         <div style={{marginTop:"100px"}}>
             <div className="deliveryCard">
-                <h2>Delivering Clean Clothes and Peace of Mind</h2>
+                <h3>Clean Clothes and Peace of Mind</h3>
                 <p>REASONS TO CHOOSE US:</p>
             </div>
-            <div className="row DeliveryCard">
-                <div className="col-md-4">
+            <div className=" DeliveryCard">
+                <div className="CardsDelivery">
                     <img className="deliveryImage" src={image1} alt="" />
                     <h4 className="deliveryCard">Professional Care</h4>
                     <p style={{color:"grey",textAlign:'justify'}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda veniam sed aperiam quaerat minima eius est aspernatur quia tempore reprehenderit architecto.</p>
                 </div>
-                <div className="col-md-4">
+                <div className="CardsDelivery">
                     <img className="deliveryImage" src={image2} alt="" />
                     <h4 className="deliveryCard">Professional Care</h4>
                     <p style={{color:"grey",textAlign:'justify'}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda veniam sed aperiam quaerat minima eius est aspernatur quia tempore reprehenderit architecto.</p>
                 </div>
-                <div className="col-md-4">
+                <div className="CardsDelivery">
                     <img className="deliveryImage" src={image3} alt="" />
                     <h4 className="deliveryCard">Professional Care</h4>
                     <p style={{color:"grey",textAlign:'justify'}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda veniam sed aperiam quaerat minima eius est aspernatur quia tempore reprehenderit architecto.</p>

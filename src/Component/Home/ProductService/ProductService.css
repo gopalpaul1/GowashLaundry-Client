@@ -1,3 +1,28 @@
 .serviceCards{
     text-align: justify;
+    margin: 20px;
+    width: 260px;
+    padding: 20px;
+}
+.serviceCards:hover{
+    text-align: justify;
+    margin: 20px;
+    width: 260px;
+    padding: 20px;
+    box-shadow: 5px 5px 20px lightgrey;
+}
+.serviceImage{
+    width: 160px;
+    height: 160px;
+    border-radius: 100px;
+    margin-left: 30px;
+}
+
+.ServicesButton{
+    border: none;
+    width: 160px;
+    height: 40px;
+    color:white;
+    font-size: large;
+    background-image: linear-gradient(to right, #00ffc8, #00ffea);
 }
