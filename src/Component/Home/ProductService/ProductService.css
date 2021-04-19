@@ -12,6 +12,13 @@
     box-shadow: 5px 5px 20px lightgrey;
 }
 .serviceImage{
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    margin-left: 60px;
+    transition: width 2s, height 2s;
+}
+.serviceImage:hover{
     width: 160px;
     height: 160px;
     border-radius: 100px;

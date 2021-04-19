@@ -14,7 +14,7 @@ const Review = () => {
             comment: data.comment
         }
         console.log(review)
-        const url = `http://localhost:5055/addReview`
+        const url = `https://blooming-sea-02282.herokuapp.com/addReview`
         fetch(url, {
             method: 'POST',
             headers: {

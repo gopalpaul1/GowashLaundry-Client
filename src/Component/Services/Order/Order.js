@@ -36,14 +36,15 @@ const Order = () => {
             ...ordered,
             order: orderData,
             paymentId, 
-            orderTime: new Date()}
+            orderTime: new Date()
+        }
 
         fetch('https://blooming-sea-02282.herokuapp.com/addOrder', {
             method: 'POST',
             headers: {
                 'content-type' : 'application/json'
             },
-            body: JSON.stringify(orderDetails)
+            body: JSON.stringify({orders:orderDetails, email:loggedInUser.email})
         })
         .then(res => res.json())
         .then(data => {
@@ -54,7 +55,6 @@ const Order = () => {
     }
 
     
-
     return (
         <div style={{ display: "flex" }}>
             <ServiceHeader />

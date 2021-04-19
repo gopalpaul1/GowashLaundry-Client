@@ -1,24 +1,42 @@
-import React from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo1 from '../../../images/209-2097878_laundry-dry-cleaning-cleaning-and-laundry-logo-png.png'
 import './ServiceHeader.css'
-import image4 from '../../../images/edit 1.png'
-import image5 from '../../../images/grid 1.png'
-import image6 from '../../../images/plus 1.png'
-import image7 from '../../../images/shopping-cart 1.png'
+import { UserContext } from '../../../App';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faListUl, faPlusCircle, faShoppingCart, faThLarge, faUserCircle, faUserPlus } from '@fortawesome/free-solid-svg-icons'
 
 const ServiceHeader = () => {
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext)
+    const [isAdmin, setIsAdmin] = useState(false)
+
+    useEffect(() => {
+        fetch('https://blooming-sea-02282.herokuapp.com/isAdmin',{
+            method: 'POST',
+            headers: {
+                'content-type' : 'application/json'
+            },
+            body: JSON.stringify({email: loggedInUser.email})
+        })
+        .then(res => res.json())
+        .then(data => setIsAdmin(data))
+    }, [])
+
     return (
         <div className="orderContainer">
             <h4 className="colorCard"><img style={{width:"40px"}} src={logo1} alt=""/>GoWash Laundry</h4>
-            <div className="OrderContent">
-                <Link className="orderLink" to="/order/:id"><img style={{width:"20px"}} src={image7} alt=""/>Order</Link><br/>
+           {  isAdmin ?  <div className="OrderContent">
+                <Link className="orderLink" to="/order/:id"><FontAwesomeIcon icon={faShoppingCart} style={{fontSize:"16px"}}/> Order</Link><br/>
+                <Link className="orderLink" to="/orderlist"><FontAwesomeIcon icon={faListUl} style={{fontSize:"16px"}}/> Order list</Link><br/>
+                <Link className="orderLink" to="/review"><FontAwesomeIcon icon={faUserCircle} style={{fontSize:"16px"}}/> Review</Link><br/>
+                <Link className="orderLink" to="/product"><FontAwesomeIcon icon={faPlusCircle} style={{fontSize:"16px"}}/> Add Service</Link><br/>
+                <Link className="orderLink" to="/admin"><FontAwesomeIcon icon={faUserPlus} style={{fontSize:"16px"}}/> Make Admin</Link><br/>
+                <Link className="orderLink" to="/manage"><FontAwesomeIcon icon={faThLarge} style={{fontSize:"16px"}}/> Manage Services</Link>
+            </div>: <div className="OrderContent">
+            <Link className="orderLink" to="/order/:id"><img style={{width:"20px"}} src={image7} alt=""/>Order</Link><br/>
                 <Link className="orderLink" to="/orderlist"><img style={{width:"20px"}} src={image7} alt=""/>Order list</Link><br/>
                 <Link className="orderLink" to="/review"><img style={{width:"20px"}} src={image7} alt=""/>Review</Link><br/>
-                <Link className="orderLink" to="/product"><img style={{width:"20px"}} src={image6} alt=""/>Add Service</Link><br/>
-                <Link className="orderLink" to="/admin"><img style={{width:"20px"}} src={image4} alt=""/>Make Admin</Link><br/>
-                <Link className="orderLink" to="/manage"><img style={{width:"20px"}} src={image5} alt=""/>Manage Services</Link>
-            </div>
+                </div>}
         </div>
     );
 };
