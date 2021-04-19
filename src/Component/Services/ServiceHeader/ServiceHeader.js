@@ -33,9 +33,9 @@ const ServiceHeader = () => {
                 <Link className="orderLink" to="/admin"><FontAwesomeIcon icon={faUserPlus} style={{fontSize:"16px"}}/> Make Admin</Link><br/>
                 <Link className="orderLink" to="/manage"><FontAwesomeIcon icon={faThLarge} style={{fontSize:"16px"}}/> Manage Services</Link>
             </div>: <div className="OrderContent">
-            <Link className="orderLink" to="/order/:id"><img style={{width:"20px"}} src={image7} alt=""/>Order</Link><br/>
-                <Link className="orderLink" to="/orderlist"><img style={{width:"20px"}} src={image7} alt=""/>Order list</Link><br/>
-                <Link className="orderLink" to="/review"><img style={{width:"20px"}} src={image7} alt=""/>Review</Link><br/>
+            <Link className="orderLink" to="/order/:id"><FontAwesomeIcon icon={faShoppingCart} style={{fontSize:"16px"}}/> Order</Link><br/>
+                <Link className="orderLink" to="/orderlist"><FontAwesomeIcon icon={faListUl} style={{fontSize:"16px"}}/> Order list</Link><br/>
+                <Link className="orderLink" to="/review"><FontAwesomeIcon icon={faUserCircle} style={{fontSize:"16px"}}/> Review</Link><br/>
                 </div>}
         </div>
     );
