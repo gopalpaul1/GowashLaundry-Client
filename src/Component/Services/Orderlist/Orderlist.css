@@ -1,4 +1,9 @@
 .OrderlistContent{
-    margin-left: 400px;
+    margin-left: 300px;
     margin-top: 40px;
+}
+
+.orderlistCard{
+    box-shadow: 5px 5px 20px lightgrey;
+    margin-left: 40px;
 }

@@ -44,7 +44,7 @@ const Order = () => {
             headers: {
                 'content-type' : 'application/json'
             },
-            body: JSON.stringify({orders:orderDetails, email:loggedInUser.email})
+            body: JSON.stringify(orderDetails)
         })
         .then(res => res.json())
         .then(data => {
