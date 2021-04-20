@@ -6,7 +6,7 @@ const AdminOrderList = () => {
     const [addList, setAddList] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5055/orders')
+        fetch(`https://blooming-sea-02282.herokuapp.com/orders`)
         .then(res => res.json())
         .then(data => setAddList(data))
     }, [])
@@ -15,7 +15,7 @@ const AdminOrderList = () => {
     const handleChange = (value, id) => {
         const status = {value: value, id: id}
 
-        fetch(`http://localhost:5055/update/${status._id}`, {
+        fetch(`https://blooming-sea-02282.herokuapp.com/update/${status._id}`, {
             method: 'PATCH',
             headers: {
                 'content-type' : 'application/json'
