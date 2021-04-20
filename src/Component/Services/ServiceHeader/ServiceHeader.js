@@ -27,7 +27,7 @@ const ServiceHeader = () => {
             <h4 className="colorCard"><img style={{width:"40px"}} src={logo1} alt=""/>GoWash Laundry</h4>
            {  isAdmin ?  <div className="OrderContent">
                 <Link className="orderLink" to="/order/:id"><FontAwesomeIcon icon={faShoppingCart} style={{fontSize:"16px"}}/> Order</Link><br/>
-                <Link className="orderLink" to="/orderlist"><FontAwesomeIcon icon={faListUl} style={{fontSize:"16px"}}/> Order list</Link><br/>
+                <Link className="orderLink" to="/addinOrderList"><FontAwesomeIcon icon={faListUl} style={{fontSize:"16px"}}/> Order list</Link><br/>
                 <Link className="orderLink" to="/review"><FontAwesomeIcon icon={faUserCircle} style={{fontSize:"16px"}}/> Review</Link><br/>
                 <Link className="orderLink" to="/product"><FontAwesomeIcon icon={faPlusCircle} style={{fontSize:"16px"}}/> Add Service</Link><br/>
                 <Link className="orderLink" to="/admin"><FontAwesomeIcon icon={faUserPlus} style={{fontSize:"16px"}}/> Make Admin</Link><br/>

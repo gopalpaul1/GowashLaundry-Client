@@ -16,6 +16,7 @@ import Admin from './Component/Services/Admin/Admin';
 import { createContext, useState } from 'react';
 import Login from './Component/Login/Login';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
+import AdminOrderList from './Component/Services/AdminOrderList/AdminOrderList';
 
 
 export const UserContext = createContext();
@@ -47,6 +48,9 @@ function App() {
           </PrivateRoute>
           <Route path="/orderlist">
             <Orderlist />
+          </Route>
+          <Route path="/addinOrderList">
+            <AdminOrderList />
           </Route>
           <Route path="/review">
             <Review />
